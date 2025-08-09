@@ -24,6 +24,34 @@ Output: gcc version 8.3.0 (SiFive GCC 8.3.0-2019.08.0)
 
 ## 3.COMPILE COMMANDS
 
+#Common to all programs:
+
+export U=$(id -un)
+export H=$(hostname -s)
+export M=$(cat /etc/machine-id | head -c 16)
+export T=$(date -u +%Y-%m-%dT%H:%M:%SZ)
+export E=$(date +%s)
+
+# A)factorial
+  riscv64-unknown-elf-gcc -O0 -g -march=rv64imac -mabi=lp64 -DUSERNAME="\"$U\"" -DHOSTNAME="\"$H\"" -DMACHINE_ID="\"$M\"" -DBUILD_UTC="\"$T\"" -DBUILD_EPOCH=$E factorial.c -o factorial
+
+# B)max_array
+   riscv64-unknown-elf-gcc -O0 -g -march=rv64imac -mabi=lp64 \
+-DUSERNAME="\"$U\"" -DHOSTNAME="\"$H\"" -DMACHINE_ID="\"$M\"" \
+-DBUILD_UTC="\"$T\"" -DBUILD_EPOCH=$E \
+max_array.c -o max_array
+
+# C)bitops
+  riscv64-unknown-elf-gcc -O0 -g -march=rv64imac -mabi=lp64 -DUSERNAME="\"$U\"" -DHOSTNAME="\"$H\"" -DMACHINE_ID="\"$M\"" -DBUILD_UTC="\"$T\"" -DBUILD_EPOCH=$E bitops.c -o bitops
+
+# D)bubble_sort
+  riscv64-unknown-elf-gcc -O0 -g -march=rv64imac -mabi=lp64 -DUSERNAME="\"$U\"" -DHOSTNAME="\"$H\"" -DMACHINE_ID="\"$M\"" -DBUILD_UTC="\"$T\"" -DBUILD_EPOCH=$E bubble_sort.c -o bubble_sort
+
+## 4. ProofID and RunID Confirmation
+
+ProofID and RunID are printed at the top of every program’s output, confirming uniqueness of system.
+For example: ![factorial output](factorial_output.png)
+
 
 
 
