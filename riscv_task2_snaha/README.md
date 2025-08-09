@@ -7,7 +7,7 @@ The work includes four C programs (`factorial`, `max_array`, `bitops`, `bubble_s
 
 
 ## 1. Spike Version
-Run the command: spike --help (spike we use doesn't include spike -version command in the source code
+Run the command: spike --help   (spike we use doesn't include spike -version command in the source code)
 
 Output: Spike RISC-V ISA Simulator 1.1.1-dev
 
@@ -24,7 +24,7 @@ Output: gcc version 8.3.0 (SiFive GCC 8.3.0-2019.08.0)
 
 ## 3.COMPILE COMMANDS
 
-#Common to all programs:
+# Common to all programs:
 
 export U=$(id -un)
 export H=$(hostname -s)
@@ -49,7 +49,7 @@ max_array.c -o max_array
 
 ## 4. ProofID and RunID Confirmation
 
-ProofID and RunID are printed at the top of every program’s output, confirming uniqueness of system.
+ProofID and RunID are printed with every program’s output, confirming uniqueness of system.
 For example: ![factorial output](factorial_output.png)
 
 
