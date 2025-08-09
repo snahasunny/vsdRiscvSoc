@@ -8,6 +8,7 @@ The work includes four C programs (`factorial`, `max_array`, `bitops`, `bubble_s
 
 ## 1. Spike Version
 Run the command: spike --help (spike we use doesn't include spike -version command in the source code
+
 Output: Spike RISC-V ISA Simulator 1.1.1-dev
 
 ![Spike Output](spike_op.png)
