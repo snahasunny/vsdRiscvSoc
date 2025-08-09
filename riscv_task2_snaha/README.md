@@ -1,4 +1,4 @@
-RISC-V Task 2 — Local Setup, Assembly, and Instruction Decoding
+## RISC-V Task 2 — Local Setup, Assembly, and Instruction Decoding
 
 # Introduction
 
