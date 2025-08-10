@@ -88,8 +88,7 @@ sudo make install
 
 ## Sanity Checks with outputs
 
-command: which riscv64-unknown-elf-gcc
-        riscv64-unknown-elf-gcc -v
+command: which riscv64-unknown-elf-gcc / riscv64-unknown-elf-gcc -v
 ![output](RISCV_gcc.png)
 command: which spike
 ![output](wh_spike.png)
